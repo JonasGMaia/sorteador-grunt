@@ -1,0 +1,75 @@
+//fonts
+@mainFont:  "Roboto", sans-serif ;
+@titleFont: "Rubik Doodle Shadow", system-ui;
+
+//colors
+@1stColor:rgb(243, 243, 169);
+@2ndColor:rgb(245, 178, 55);
+@3rdColor: rgb(100, 65, 1);
+@bgColor: rgb(223, 146, 5);
+
+
+body{
+    background-color: @bgColor;
+    color:@3rdColor;
+    font-family: @mainFont;
+}
+
+h1{
+    font-family: @titleFont;
+    font-size: 3em;
+    color: @1stColor;
+}
+
+main{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    text-align: center;
+}
+
+button{
+    padding:20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: @mainFont;
+    margin-top:5%;
+    border-radius:25% 0%;
+    background-color: @bgColor;
+    color:@1stColor;
+    border: solid 6px @1stColor;
+    box-shadow:-4px 8px 0px 0px @1stColor;
+    
+    &:hover{
+        background-color: @2ndColor;
+    }
+}
+
+input{
+    background-color: transparent;
+    color:@3rdColor;
+    max-width: 3em;
+    text-align: center;
+    border:none;
+    border-bottom: solid 6px @1stColor;
+    font-size: 1.3em;
+    &:focus{
+        outline:none;
+    }
+}
+
+.resultado{
+    display: none;
+    padding: 16px;
+    border: 8px dotted @1stColor;
+    text-align: center;
+    margin: 80px auto;
+    max-width: 50%;
+    span{
+        font-weight: bold;
+        font-size: 3em;
+        display: block;
+    }
+}
